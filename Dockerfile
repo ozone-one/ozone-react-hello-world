@@ -1,4 +1,4 @@
-FROM ozregistry.azurecr.io/ozone-public-registry/ozoneprod/node:14.5.0-alpine AS build-stage
+FROM blrdbharbor.ozonecloud.ai/ozone-public-registry/ozoneprod/node:14.5.0-alpine AS build-stage
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm install --production
 
 RUN npm run build
 
-FROM ozregistry.azurecr.io/ozone-public-registry/ozoneprod/nginx:1.19.2-alpine
+FROM blrdbharbor.ozonecloud.ai/ozone-public-registry/ozoneprod/nginx:1.19.2-alpine
 
 WORKDIR /var/www/html
 
